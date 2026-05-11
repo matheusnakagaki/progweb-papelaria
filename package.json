@@ -1,0 +1,26 @@
+{
+  "name": "progweb-papelaria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusnakagaki/progweb-papelaria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/matheusnakagaki/progweb-papelaria/issues"
+  },
+  "homepage": "https://github.com/matheusnakagaki/progweb-papelaria#readme",
+  "dependencies": {
+    "@types/node": "^25.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
