@@ -1,11 +1,11 @@
 import { Endereco } from "./Endereco"
 
 export class Fabricante {
-    nomeFab: string;
+    nome: string;
     endereco: Endereco
 
-    constructor(nomeFab: string, endereco: Endereco) {
-        this.nomeFab = nomeFab;
+    constructor(nome: string, endereco: Endereco) {
+        this.nome = nome;
         this.endereco = endereco;
     }
 }
