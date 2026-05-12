@@ -5,7 +5,7 @@ import { Endereco } from "../models/Endereco"
 
 const produtos: Produto[] = [];
 
-export function novoProduto(req: Request, res: Response): void {
+export function cadastrarProdutos(req: Request, res: Response): void {
     try {
         let dadosProduto: any = req.body
 
@@ -48,5 +48,15 @@ export function novoProduto(req: Request, res: Response): void {
         res.status(400).json({
             Message: (erro as Error).message
         })
+    }
+}
+
+export function listarProdutos(req: Request, res: Response): void {
+    try {
+        res.status(200).json(produtos);
+    } catch (erro: unknown) {
+        res.status(500).json({
+            Message: "Erro ao listar produtos"
+        });
     }
 }

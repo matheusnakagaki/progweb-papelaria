@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { novoProduto, } from "../controladores/controladores";
+import { cadastrarProdutos, listarProdutos } from "../controladores/controladores";
 
 const router = Router();
 
-router.post("/product", novoProduto);
+router.post("/produtos", cadastrarProdutos);
+router.get("/produtos", listarProdutos);
+
 
 export default router;
