@@ -1,0 +1,136 @@
+{
+  "info": {
+    "_postman_id": "b20a6a08-aff0-478b-a30a-611071d59d9c",
+    "name": "progweb-papelaria",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54272971",
+    "_collection_link": "https://go.postman.co/collection/54272971-b20a6a08-aff0-478b-a30a-611071d59d9c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Req 1 Válida - Cadastrar Produto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"nome\": \"Caderno Universitário\",\r\n  \"preco\": 25.90,\r\n  \"fabricante\": {\r\n    \"nome\": \"Tilibra\",\r\n    \"endereco\": {\r\n      \"cidade\": \"Bauru\",\r\n      \"pais\": \"Brasil\"\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Req 2 - Listar Produtos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Req 3 - Buscar Produtos por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/produtos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Req 4 - Atualizar produto por Id + Body",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Caderno Universitário\",\r\n  \"fabricante\": {\r\n    \"endereco\": {\r\n      \"cidade\": \"Campinas\"\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/produtos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Req 5 - Deletar produto",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Caderno Universitário\",\r\n  \"fabricante\": {\r\n    \"endereco\": {\r\n      \"cidade\": \"Campinas\"\r\n    }\r\n  }\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/produtos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "produtos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
