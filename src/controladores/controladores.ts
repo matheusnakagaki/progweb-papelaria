@@ -60,3 +60,26 @@ export function listarProdutos(req: Request, res: Response): void {
         });
     }
 }
+
+
+export function buscarProdutoPorId(req: Request, res: Response): void {
+    try {
+        const id = Number(req.params.id);
+
+        const produto = produtos.find(p => p.id === id);
+
+        if (!produto) {
+            res.status(404).json({
+                Message: "Produto não encontrado"
+            });
+            return;
+        }
+
+        res.status(200).json(produto);
+
+    } catch (erro: unknown) {
+        res.status(400).json({
+            Message: (erro as Error).message
+        });
+    }
+}
